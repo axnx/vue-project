@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS version_history (
     version TEXT NOT NULL
 );
 --------------------------------------------------------------------------------
---config
+--settings
 DROP TABLE IF EXISTS settings;
 CREATE TABLE IF NOT EXISTS settings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

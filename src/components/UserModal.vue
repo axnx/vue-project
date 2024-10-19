@@ -1,5 +1,5 @@
 <template>
-    <div v-if="isOpen" class="modal-overlay">
+     <div v-if="isOpen" class="modal-overlay" @keydown.esc="close" tabindex="0">
       <div class="modal-content">
         <h2>Edit User</h2>
         <form @submit.prevent="submitData">
@@ -54,6 +54,19 @@
       close() {
         this.$emit('close'); // Emit event to close the modal
       },
+      handleKeyDown(event) {
+      if (event.key === 'Escape') {
+        this.close(); // Close modal on Escape key
+      }
+    },
+  },
+    mounted() {
+      // Add event listener for keydown events
+      window.addEventListener('keydown', this.handleKeyDown);
+    },
+    beforeDestroy() {
+      // Clean up the event listener
+      window.removeEventListener('keydown', this.handleKeyDown);
     },
   };
   </script>

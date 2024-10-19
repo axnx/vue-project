@@ -101,6 +101,17 @@ app.get('/users', (req, res) => {
   });
 });
 
+// Close the database connection when the application exits
+process.on('SIGINT', () => {
+  db.close((err) => {
+    if (err) {
+      console.error(err.message);
+    }
+    console.log('Closed the database connection.');
+    process.exit(0);
+  });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Backend server is running on http://localhost:${port}`);
