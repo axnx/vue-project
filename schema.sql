@@ -1,4 +1,6 @@
--- Create userlogin table
+--userlogin
+DROP TABLE userlogin;
+
 CREATE TABLE IF NOT EXISTS userlogin (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   username TEXT NOT NULL,
@@ -6,7 +8,8 @@ CREATE TABLE IF NOT EXISTS userlogin (
   password TEXT NOT NULL,
   created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
--------------------------------------------
+--------------------------------------------------------------------------------
+--users
 DROP TABLE users;
 
 CREATE TABLE IF NOT EXISTS users (
@@ -17,4 +20,4 @@ CREATE TABLE IF NOT EXISTS users (
   plz TEXT NOT NULL,
   ort TEXT NOT NULL
 );
--------------------------------------------
+--------------------------------------------------------------------------------
