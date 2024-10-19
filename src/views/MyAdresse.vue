@@ -1,39 +1,62 @@
 <template>
-  <div class="MyTest">
-    <h1>Login</h1>
-
-    <form>
-  <label for="vname">Vorname:
-    <input id="vname" name="vname">
-  </label>
-  <label for="zname">Zuname: 
-    <input id="zname" name="zname">
-  </label>
-
-  
-  <label for="v2name">Vorname:
-    <input id="v2name" name="v2name">
-  </label>
-  <label for="z2name">Zuname: 
-    <input id="z2name" name="z2name">
-  </label>
-  <input type="checkbox" id="alter" name="alter">
-  <input type="submit" value="senden">
-
-  <label for="fruit">Choose a fruit:</label>
-<select id="fruit" name="fruit">
-  <option value="apple">buy</option>
-  <option value="banana">sell</option>
-</select>
-
-  </form>
-
- 
+  <div class="Adresse">
+    <h1>Adresse</h1>
+    <form @submit.prevent="submitData">
+      <label for="vorname">Vorname:
+        <input id="vorname" name="vorname">
+      </label>
+      <label for="nachname">Nachname:
+        <input id="nachname" name="nachname">
+      </label>
+      <label for="strasse">Strasse:
+        <input id="strasse" name="strasse">
+      </label>
+      <label for="plz">PLZ:
+        <input id="plz" name="plz">
+      </label>
+      <label for="ort">Ort:
+        <input id="ort" name="ort">
+      </label>
+      <input type="submit" value="senden">
+    </form>
   </div>
 </template>
 
 
 <script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      formData: {
+        vorname: 'Homer',
+        nachname: 'Simpson',
+        strasse: 'Obststrasse 22',
+        plz: '47585',
+        ort: 'Stuttgart',
+      }
+    };
+  },
+  methods: {
+    async submitData() {
+      try {
+        //const response = await axios.post('/api/post', 
+        const response = await axios.post('/api/submit', 
+          this.formData,
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  }
+};
 
 </script>
 

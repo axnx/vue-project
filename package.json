@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev_std": "vite",
+    "dev": "concurrently \"vite\" \"nodemon server.js\"",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -12,6 +13,7 @@
     "@awsui/components-react": "^3.0.1344",
     "@awsui/design-tokens": "^3.0.75",
     "axios": "^1.7.7",
+    "concurrently": "^9.0.1",
     "express": "^4.21.1",
     "nodemon": "^3.1.7",
     "sqlite3": "^5.1.7",

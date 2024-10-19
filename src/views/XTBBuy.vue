@@ -9,7 +9,6 @@
   <label for="zname">Bezeichnung: 
     <input id="zname" name="zname">
   </label>
-
  
   <label for="fruit">Choose a fruit:</label>
 <select id="fruit" name="fruit">
