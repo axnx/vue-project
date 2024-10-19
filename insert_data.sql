@@ -2,9 +2,11 @@
 --userlogin
 INSERT INTO userlogin (username, email, password) VALUES
 ('smueller', 'mueller@axms.de', 'test123'),
-('jschmidt', 'schmidt@axms.de', 'hallo123');
+('jschmidt', 'schmidt@axms.de', 'hallo123'),
+('mriet', 'riet@axms.de', 'urlaub');
 --------------------------------------------------------------------------------s
 --users
+
 INSERT INTO users (vorname, nachname, strasse, plz, ort) VALUES
 ('Anna', 'Müller', 'Hauptstraße 12', '10115', 'Berlin'),
 ('Lukas', 'Schmidt', 'Gartenweg 5', '20256', 'Hamburg'),
@@ -17,3 +19,7 @@ INSERT INTO users (vorname, nachname, strasse, plz, ort) VALUES
 ('Leonie', 'Schneider', 'Feldstraße 11', '28203', 'Bremen'),
 ('Jonas', 'Braun', 'Ringstraße 30', '50825', 'Köln');
 --------------------------------------------------------------------------------
+--version_history
+INSERT INTO version_history (version) VALUES
+('1.0'),
+('1.2');

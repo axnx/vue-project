@@ -4,16 +4,19 @@ import bodyParser from 'body-parser';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load environment variables
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to SQLite database (or create one)
-const db = new sqlite3.Database('./database.db', (err) => {
+const db = new sqlite3.Database(process.env.DB_PATH || './database.db', (err) => {
   if (err) {
     return console.error(err.message);
   }
