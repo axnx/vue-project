@@ -24,7 +24,6 @@
       <input type="submit" value="senden">
     </form>
 
- 
   </div>
 </template>
 
