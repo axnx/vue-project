@@ -38,11 +38,11 @@ export default {
   data() {
     return {
       formData: {
-        vorname: 'Homer',
-        nachname: 'Simpson',
-        strasse: 'Obststrasse 22',
-        plz: '47585',
-        ort: 'Stuttgart',
+        vorname: '',
+        nachname: '',
+        strasse: '',
+        plz: '',
+        ort: '',
       }
     };
   },
@@ -64,6 +64,7 @@ export default {
         await this.fetchUsers();
 
         // Optional: Formular zurücksetzen
+        /*
         this.formData = {
           vorname: '',
           nachname: '',
@@ -71,7 +72,7 @@ export default {
           plz: '',
           ort: '',
         };
-
+      */
       } catch (error) {
         console.error(error);
       }
