@@ -4,6 +4,9 @@ import LagerView from '../views/LagerView.vue'
 import AdresseView from '@/views/AdresseView.vue'
 import LoginView from '@/views/LoginView.vue'
 import TimerView from '@/views/TimerView.vue'
+import SystemView from '@/views/SystemView.vue'
+import Dashboard from '@/components/Dashboard.vue'
+import RegisterView from '@/views/RegisterView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +21,24 @@ const router = createRouter({
     { path: '/Adresse', name: 'Adresse', component: AdresseView },
     { path: '/Lager', name: 'Lager', component: LagerView },
     { path: '/login', name: 'Login', component: LoginView },
-    { path: '/timer', name: 'Timer', component: TimerView }
+    { path: '/timer', name: 'Timer', component: TimerView },
+    { path: '/system', name: 'System', component: SystemView },
+    { path: '/register', name: 'Register', component: RegisterView },
+    
+    {
+      path: '/dashboard',
+      component: Dashboard,
+      beforeEnter: (to, from, next) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+          next();
+        } else {
+          next('/login');
+        }
+      }
+    }
+    
+    
   ]
 })
 

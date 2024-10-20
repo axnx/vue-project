@@ -4,11 +4,17 @@
       <button @click="startTimer" :disabled="isRunning">Start</button>
       <button @click="stopTimer" :disabled="!isRunning">Stop</button>
       <button @click="resetTimer">Reset</button>
+      <CookieManager/>
     </div>
   </template>
   
   <script>
+  import CookieManager from './CookieManager.vue';
+
   export default {
+    components: {
+        CookieManager,
+    },
     data() {
       return {
         time: 0, // Time in seconds

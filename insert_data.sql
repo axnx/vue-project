@@ -1,9 +1,12 @@
 
 --userlogin
 INSERT INTO userlogin (username, email, password) VALUES
-('smueller', 'mueller@axms.de', 'test123'),
-('jschmidt', 'schmidt@axms.de', 'hallo123'),
-('mriet', 'riet@axms.de', 'urlaub');
+('admin', 'admin@admin', '$2b$10$WoK/btsv82.xxi63kSeqrOqaqPce0Ps86WTHeqmu5DLaycmELsNq.'),
+('test', 'test@test.com', '$2b$10$9ndU/t1YjX1i9GZytYR7A.3GpTtuqpYXMcwO6MYWsM4UGsa3n0SBu'),
+('max', 'max@max.com', '$2b$10$Hm5nToMtHW2YU2jBZ4XkheHgiHLhLLfC/OY6mTLYsyjKUu83IsiN.');
+--('smueller', 'mueller@axms.de', 'test123'),
+--('jschmidt', 'schmidt@axms.de', 'hallo123'),
+--('mriet', 'riet@axms.de', 'urlaub'),
 --------------------------------------------------------------------------------s
 --users
 

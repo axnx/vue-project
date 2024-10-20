@@ -5,7 +5,6 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import MyTest from './MyTest.vue'
 import IconMyTest from './icons/IconMyTest.vue'
 import IconSupport from './icons/IconSupport.vue'
 </script>

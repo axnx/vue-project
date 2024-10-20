@@ -8,7 +8,6 @@ import Timer from '../components/Timer.vue'
   </main>
 </template>
 
-
 <style>
 @media (min-width: 1024px) {
   .about {

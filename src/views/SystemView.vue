@@ -1,7 +1,11 @@
+<script setup>
+import WanIP from '../components/WanIP.vue'
+</script>
+
 <template>
-  <div class="version">
-    <h1>version page</h1>
-  </div>
+  <main>
+    <WanIP />
+  </main>
 </template>
 
 <style>
