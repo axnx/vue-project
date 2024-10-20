@@ -86,3 +86,12 @@ CREATE TABLE countries (
     continent VARCHAR(50)
 );
 --------------------------------------------------------------------------------
+-- companies
+DROP TABLE IF EXISTS companies;
+--
+CREATE TABLE companies (
+    symbol VARCHAR(10),
+    name VARCHAR(255),
+    sector VARCHAR(100)
+);
+--------------------------------------------------------------------------------
