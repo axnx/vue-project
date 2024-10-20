@@ -20,6 +20,13 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/system">System</RouterLink>
         <RouterLink to="/dashboard">dashboard</RouterLink>
         <RouterLink to="/register">Register</RouterLink>
+        <RouterLink to="/version">version</RouterLink>
+
+         <!-- Conditional RouterLink -->
+      <!--  <RouterLink v-if="isTokenValid" to="/userlogin">User Login</RouterLink>
+      <span v-else>User Login (Unavailable)</span>  -->
+
+        <RouterLink to="/userlogin">userlogin</RouterLink>
       </nav>
     </div>
   </header>

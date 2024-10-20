@@ -9,7 +9,6 @@ INSERT INTO userlogin (username, email, password) VALUES
 --('mriet', 'riet@axms.de', 'urlaub'),
 --------------------------------------------------------------------------------s
 --users
-
 INSERT INTO users (vorname, nachname, strasse, plz, ort) VALUES
 ('Anna', 'Müller', 'Hauptstraße 12', '10115', 'Berlin'),
 ('Lukas', 'Schmidt', 'Gartenweg 5', '20256', 'Hamburg'),

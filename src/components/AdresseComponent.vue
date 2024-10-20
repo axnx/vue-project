@@ -50,7 +50,7 @@ export default {
     async submitData() {
       try {
         //const response = await axios.post('/api/post', 
-        const response = await axios.post('/api/submit', 
+        const response = await axios.post('/api/user/submit', 
           this.formData,
           {
             headers: {

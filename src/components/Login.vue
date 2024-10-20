@@ -40,7 +40,7 @@ export default {
 
         // Redirect or handle successful login
         alert('Login successful');
-        this.$router.push('/dashboard'); // Redirect to dashboard after successful login
+        this.$router.push('/api/dashboard'); // Redirect to dashboard after successful login
       } catch (error) {
         this.errorMessage = error.response?.data?.message || 'Login failed';
       }

@@ -60,7 +60,7 @@ export default {
   methods: {
     async fetchUsers() {
       try {
-        const response = await axios.get('/api/users');
+        const response = await axios.get('/api/user/');
         this.users = response.data; // Assuming your API returns an array of users
       } catch (error) {
         console.error('Fehler beim Laden der Benutzerdaten:', error);

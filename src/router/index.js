@@ -7,6 +7,8 @@ import TimerView from '@/views/TimerView.vue'
 import SystemView from '@/views/SystemView.vue'
 import Dashboard from '@/components/Dashboard.vue'
 import RegisterView from '@/views/RegisterView.vue'
+import UserLoginView from '@/views/UserLoginView.vue'
+import VersionView from '@/views/VersionView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +26,8 @@ const router = createRouter({
     { path: '/timer', name: 'Timer', component: TimerView },
     { path: '/system', name: 'System', component: SystemView },
     { path: '/register', name: 'Register', component: RegisterView },
-    
+    { path: '/userlogin', name: 'UserLogin', component: UserLoginView },
+    { path: '/version', name: 'Version', component: VersionView },
     {
       path: '/dashboard',
       component: Dashboard,
@@ -36,9 +39,7 @@ const router = createRouter({
           next('/login');
         }
       }
-    }
-    
-    
+    }   
   ]
 })
 

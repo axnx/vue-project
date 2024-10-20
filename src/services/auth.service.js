@@ -1,4 +1,5 @@
 // src/services/auth.service.js
+/*
 import axios from 'axios';
 
 const API_URL = 'http://localhost:3000/'; // Replace with your API URL
@@ -36,3 +37,4 @@ class AuthService {
 }
 
 export default new AuthService();
+*/

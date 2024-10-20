@@ -37,7 +37,7 @@
     methods: {
       async handleRegister() {
         try {
-          const response = await axios.post('/api/register', {
+          const response = await axios.post('/api/login/register', {
             username: this.username,
             email: this.email,
             password: this.password
