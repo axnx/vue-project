@@ -1,5 +1,7 @@
 
---userlogin
+-- insert_data.sql
+--------------------------------------------------------------------------------
+-- userlogin
 INSERT INTO userlogin (username, email, password) VALUES
 ('admin', 'admin@admin', '$2b$10$WoK/btsv82.xxi63kSeqrOqaqPce0Ps86WTHeqmu5DLaycmELsNq.'),
 ('test', 'test@test.com', '$2b$10$9ndU/t1YjX1i9GZytYR7A.3GpTtuqpYXMcwO6MYWsM4UGsa3n0SBu'),
@@ -7,8 +9,8 @@ INSERT INTO userlogin (username, email, password) VALUES
 --('smueller', 'mueller@axms.de', 'test123'),
 --('jschmidt', 'schmidt@axms.de', 'hallo123'),
 --('mriet', 'riet@axms.de', 'urlaub'),
---------------------------------------------------------------------------------s
---users
+--------------------------------------------------------------------------------
+-- users
 INSERT INTO users (vorname, nachname, strasse, plz, ort) VALUES
 ('Anna', 'Müller', 'Hauptstraße 12', '10115', 'Berlin'),
 ('Lukas', 'Schmidt', 'Gartenweg 5', '20256', 'Hamburg'),
@@ -21,7 +23,21 @@ INSERT INTO users (vorname, nachname, strasse, plz, ort) VALUES
 ('Leonie', 'Schneider', 'Feldstraße 11', '28203', 'Bremen'),
 ('Jonas', 'Braun', 'Ringstraße 30', '50825', 'Köln');
 --------------------------------------------------------------------------------
---version_history
+-- version_history
 INSERT INTO version_history (version) VALUES
 ('1.0'),
 ('1.2');
+--------------------------------------------------------------------------------
+-- department
+INSERT INTO department (name) VALUES
+('Technik'),
+('Einkauf'),
+('Lager'),
+('Verkauf'),
+('Vertrieb'),
+('Geschäftsführung'),
+('Personal'),
+('Finanzbuchhaltung'),
+('Schulung'),
+('Marketing');
+--------------------------------------------------------------------------------

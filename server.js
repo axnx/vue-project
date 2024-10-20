@@ -1,16 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-//import cors from 'cors'; // Import CORS
-import { authenticateToken } from './src/services/authMiddleware.js';
-import db from './db.js';
-
+//-----------------------------------------------------------------------------
 dotenv.config(); // Load environment variables
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middleware
 app.use(bodyParser.json());
 //app.use(cors()); // Enable CORS
 app.use(express.urlencoded({ extended: true }));
@@ -19,19 +15,11 @@ app.use(express.urlencoded({ extended: true }));
 import loginRoutes from './routes/api/loginRoutes.js';
 import userRoutes from './routes/api/userRoutes.js';
 import versionRoutes from './routes/api/versionRoutes.js';
+import departmentRoutes from './routes/api/departmentRoutes.js';
 app.use('/login',loginRoutes);
 app.use('/user',userRoutes);
 app.use('/version',versionRoutes);
-
-// app.get('/version', (req, res) => {
-//   db.all('SELECT * FROM version_history', [], (err, rows) => {
-//     if (err) {
-//       return res.status(500).json({ error: err.message });
-//     }
-//     res.json(rows);
-//   });
-// });
-
+app.use('/department',departmentRoutes);
 //-----------------------------------------------------------------------------
 // Start the server
 app.listen(port, () => {

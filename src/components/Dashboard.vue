@@ -5,8 +5,8 @@
       <button @click="logout">Logout</button>
     </div>
   </template>
-  
-  <script>
+  <!----------------------------------------------------------------------------->
+    <script>
   import axios from 'axios';
   
   export default {
@@ -40,7 +40,7 @@
     }
   };
   </script>
-  
+  <!----------------------------------------------------------------------------->
   <style scoped>
   .dashboard {
     max-width: 600px;

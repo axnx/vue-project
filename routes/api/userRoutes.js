@@ -3,7 +3,7 @@ import { authenticateToken } from '../../src/services/authMiddleware.js';
 import db from '../../db.js';
 //-----------------------------------------------------------------------------
 const router = express.Router();
-// ENDPOINT /api/users
+// ENDPOINT /api/user
 //-----------------------------------------------------------------------------
 // GET /users
 // GET route to retrieve all users

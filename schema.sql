@@ -1,4 +1,6 @@
---userlogin
+-- schema.sql
+--------------------------------------------------------------------------------
+-- userlogin
 DROP TABLE IF EXISTS userlogin;
 --
 CREATE TABLE IF NOT EXISTS userlogin (
@@ -9,7 +11,7 @@ CREATE TABLE IF NOT EXISTS userlogin (
   created_at TEXT DEFAULT CURRENT_TIMESTAMP
 );
 --------------------------------------------------------------------------------
---users
+-- users
 DROP TABLE IF EXISTS users;
 --
 CREATE TABLE IF NOT EXISTS users (
@@ -21,7 +23,7 @@ CREATE TABLE IF NOT EXISTS users (
   ort TEXT NOT NULL
 );
 --------------------------------------------------------------------------------
---version_history
+-- version_history
 DROP TABLE IF EXISTS version_history;
 --
 CREATE TABLE IF NOT EXISTS version_history (
@@ -29,7 +31,7 @@ CREATE TABLE IF NOT EXISTS version_history (
     version TEXT NOT NULL
 );
 --------------------------------------------------------------------------------
---settings
+-- settings
 DROP TABLE IF EXISTS settings;
 --
 CREATE TABLE IF NOT EXISTS settings (
@@ -51,7 +53,7 @@ CREATE TABLE kv (
 );
 */
 --------------------------------------------------------------------------------
---login_history
+-- login_history
 DROP TABLE IF EXISTS login_history;
 --
 CREATE TABLE login_history (
@@ -61,5 +63,16 @@ CREATE TABLE login_history (
     ip_address TEXT,
     status TEXT,
     FOREIGN KEY (user_id) REFERENCES userlogin (id)
+);
+--------------------------------------------------------------------------------
+-- department
+DROP TABLE IF EXISTS department;
+--
+CREATE TABLE department (
+    --department_id INT PRIMARY KEY AUTO_INCREMENT,  
+    name VARCHAR(100) NOT NULL,                    
+    --description TEXT,                              
+    --location VARCHAR(100),                       
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 --------------------------------------------------------------------------------
