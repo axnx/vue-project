@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import path from 'path';
 
-const db = new sqlite3.Database(process.env.DB_PATH || './database.db', (err) => {
+const db= new sqlite3.Database(process.env.DB_PATH || './database.db', (err) => {
     if (err) {
       return console.error(err.message);
     }
@@ -50,7 +50,7 @@ const insertInitialData = () => {
 };
 //-----------------------------------------------------------------------------
 // Initialize database
-const initializeDatabase = async () => {
+export const initializeDatabase = async () => {
   try {
     await executeSchema(schemaSql);
     await insertInitialData();
@@ -60,7 +60,7 @@ const initializeDatabase = async () => {
 };
 
 // Call the initialization function
-initializeDatabase();
+//initializeDatabase();
 
 // Close the database connection when the application exits
 process.on('SIGINT', () => {

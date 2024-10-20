@@ -10,6 +10,7 @@ import RegisterView from '@/views/RegisterView.vue'
 import UserLoginView from '@/views/UserLoginView.vue'
 import VersionView from '@/views/VersionView.vue'
 import TestView from '@/views/TestView.vue'
+import CountryView from '@/views/CountryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,7 @@ const router = createRouter({
     { path: '/userlogin', name: 'UserLogin', component: UserLoginView },
     { path: '/version', name: 'Version', component: VersionView },
     { path: '/test', name: 'Test', component: TestView },
+    { path: '/country', name: 'Country', component: CountryView },
     {
       path: '/dashboard',
       component: Dashboard,
