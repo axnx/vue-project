@@ -76,3 +76,13 @@ CREATE TABLE department (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 --------------------------------------------------------------------------------
+-- countries
+DROP TABLE IF EXISTS countries;
+--
+CREATE TABLE countries (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(100),
+    code VARCHAR(2),
+    continent VARCHAR(50)
+);
+--------------------------------------------------------------------------------
