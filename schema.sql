@@ -95,3 +95,21 @@ CREATE TABLE companies (
     sector VARCHAR(100)
 );
 --------------------------------------------------------------------------------
+-- currency_spot_chart
+DROP TABLE IF EXISTS currency_spot_chart;
+--
+CREATE TABLE currency_spot_chart (
+    currency_code TEXT,
+    currency_name TEXT,
+    exchange_rate REAL
+);
+
+--------------------------------------------------------------------------------
+-- european_ports
+DROP TABLE IF EXISTS european_ports;
+--
+CREATE TABLE european_ports (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    port_name TEXT NOT NULL,
+    country TEXT NOT NULL
+);

@@ -473,4 +473,64 @@ INSERT INTO companies (symbol, name, sector) VALUES
 ('DRE', 'Duke Realty Corporation', 'Finance'),
 ('NRG', 'NRG Energy, Inc.', 'Utilities'),
 ('CAG', 'Conagra Brands, Inc.', 'Consumer Non-Durables'),
-('TDG', 'TransDigm Group Incorporated', 'Producer Manufacturing')
+('TDG', 'TransDigm Group Incorporated', 'Producer Manufacturing');
+--------------------------------------------------------------------------------
+-- currency_spot_chart
+INSERT INTO currency_spot_chart (currency_code, currency_name, exchange_rate)
+VALUES
+    ('USD', 'US Dollar', 1.0853),
+    ('JPY', 'Japanese Yen', 162.79),
+    ('BGN', 'Bulgarian Lev', 1.9558),
+    ('CZK', 'Czech Koruna', 25.268),
+    ('DKK', 'Danish Krone', 7.4587),
+    ('GBP', 'Pound Sterling', 0.83315),
+    ('HUF', 'Hungarian Forint', 401.60),
+    ('PLN', 'Polish Zloty', 4.3175),
+    ('RON', 'Romanian Leu', 4.9728),
+    ('SEK', 'Swedish Krona', 11.4275),
+    ('CHF', 'Swiss Franc', 0.9380),
+    ('ISK', 'Icelandic Krona', 149.30),
+    ('NOK', 'Norwegian Krone', 11.8380),
+    ('TRY', 'Turkish Lira', 37.1763),
+    ('AUD', 'Australian Dollar', 1.6230),
+    ('BRL', 'Brazilian Real', 6.1953),
+    ('CAD', 'Canadian Dollar', 1.4998),
+    ('CNY', 'Chinese Yuan Renminbi', 7.7198),
+    ('HKD', 'Hong Kong Dollar', 8.4351),
+    ('IDR', 'Indonesian Rupiah', 16816.56),
+    ('ILS', 'Israeli Shekel', 4.0948),
+    ('INR', 'Indian Rupee', 91.2440),
+    ('KRW', 'South Korean Won', 1495.73),
+    ('MXN', 'Mexican Peso', 21.6539),
+    ('MYR', 'Malaysian Ringgit', 4.6744),
+    ('NZD', 'New Zealand Dollar', 1.7920),
+    ('PHP', 'Philippine Peso', 62.527),
+    ('SGD', 'Singapore Dollar', 1.4246),
+    ('THB', 'Thai Baht', 36.309);
+--ON CONFLICT(currency_code) DO NOTHING;
+--------------------------------------------------------------------------------
+-- european_ports
+INSERT INTO european_ports (port_name, country) VALUES
+    ('Rotterdam', 'Niederlande'),
+    ('Antwerpen', 'Belgien'),
+    ('Hamburg', 'Deutschland'),
+    ('Bremen/Bremerhaven', 'Deutschland'),
+    ('Zeebrugge', 'Belgien'),
+    ('Le Havre', 'Frankreich'),
+    ('Marseille', 'Frankreich'),
+    ('Valencia', 'Spanien'),
+    ('Barcelona', 'Spanien'),
+    ('Genua', 'Italien'),
+    ('Triest', 'Italien'),
+    ('Düsseldorf', 'Deutschland'),
+    ('Dunkerque', 'Frankreich'),
+    ('Kopenhagen', 'Dänemark'),
+    ('Oslo', 'Norwegen'),
+    ('Tanger-Med', 'Marokko'),
+    ('Sofia', 'Bulgarien'),
+    ('Stockholm', 'Schweden'),
+    ('Helsinki', 'Finnland'),
+    ('Riga', 'Lettland'),
+    ('Tallinn', 'Estland'),
+    ('Gdansk', 'Polen');
+--------------------------------------------------------------------------------    
